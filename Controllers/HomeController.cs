@@ -6,27 +6,18 @@ namespace ToDo_WebAplication.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private ToDoContext context;
+        public HomeController(ToDoContext ctx) => context = ctx;
 
-        public HomeController(ILogger<HomeController> logger)
+        public IActionResult Index(string id)
         {
-            _logger = logger;
-        }
+            var filters = new Filters(id);
+            ViewBag.Filter = filters;
 
-        public IActionResult Index()
-        {
+
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+       
     }
 }
