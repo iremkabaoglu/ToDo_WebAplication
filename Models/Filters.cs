@@ -7,7 +7,7 @@ namespace ToDo_WebAplication.Models
             public Filters(string filterstring)
             {
                 Filterstring = filterstring ?? "all-all-all";
-                string[] filters = filterstring.Split('-');
+                string[] filters = Filterstring.Split('-');
                 CategoryId = filters[0];
                 Due = filters[1];
                 StatusId = filters[2];
