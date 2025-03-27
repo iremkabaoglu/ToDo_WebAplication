@@ -4,26 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Tasks</title>
-    <script type="importmap"></script>
+
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ToDo_WebAplication.styles.css" asp-append-version="true" />
 </head>
 <body>
-   
+
     <div class="container">
-        <header class="bg-primary text-white text-center">
-            <h1 class="m-3 p-3">My Tasks</h1>
+        <img src="~/images/icon.png" alt="Logo" class="logo">
+        <header class=" text-white text-center mytask">
+            <h1 class="m-3 p-3 mytask">My Tasks</h1>
         </header>
         <main>
             @RenderBody()
         </main>
     </div>
 
-   
+    <!-- jQuery and Bootstrap JS -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script -->
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

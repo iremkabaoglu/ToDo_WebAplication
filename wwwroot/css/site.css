@@ -29,3 +29,22 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+.custom-btn {
+    background-color: #c18efa !important;
+    border-color: #c18efa !important;
+    color: white !important; /* Yazýnýn okunaklý olmasý için */
+}
+
+.mytask {
+    border-radius: 20px;
+    background-color: #5c67bc;
+}
+.logo {
+    position: absolute; /* Sayfa içinde sol üst köþeye sabitler */
+    top: 10px; /* Yukarýdan 10px boþluk */
+    left: 10px; /* Soldan 10px boþluk */
+    width: 50px; /* Logonun geniþliði */
+    height: auto; /* Oranýný korumasý için */
+}
+
+
