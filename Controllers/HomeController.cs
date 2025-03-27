@@ -17,7 +17,7 @@ namespace ToDo_WebAplication.Controllers
             ViewBag.Filter = filters;
 
             ViewBag.Categories = context.Categories.ToList();
-            ViewBag.Status = context.Statuses.ToList();
+            ViewBag.Statuses = context.Statuses.ToList();
             ViewBag.DueFilters = Filters.DueFilterValues;
 
             IQueryable<ToDo> query = context.ToDos
